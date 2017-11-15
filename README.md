@@ -31,7 +31,7 @@ Given the included [pricing data](./pricing.data), build a RESTful API endpoint 
 				"product_id": 3,
 				"quantity": 1
 			}
-		}		
+		]
 	}
 }
 ```
