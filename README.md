@@ -1,4 +1,4 @@
-# coding-test-pricing-service
+# Coding Test: Pricing Service
 
 Thank you for taking the time to complete our coding test. Your challenge is to recreate a hypothetical version of our internal pricing service. 
 
