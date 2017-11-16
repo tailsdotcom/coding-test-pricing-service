@@ -9,7 +9,7 @@ Feel free to **spend as much or as little time as you'd like** as long as the sp
 
 ## Building the basic API
 
-Given the included [pricing data](./pricing.data), build a RESTful API endpoint that will accept requests like the one shown below and return pricing information for the order:
+Given the included [pricing data](./pricing.json), build a RESTful API endpoint that will accept requests like the one shown below and return pricing information for the order:
 
 ```json
 {
