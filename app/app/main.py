@@ -10,6 +10,8 @@ api = Api(app=app,
           default='pricing',
           default_label='Pricing Services')
 
+# import endpoints in the api module
+from .api import api
 
 if __name__ == "__main__":
     # Only for debugging while developing
