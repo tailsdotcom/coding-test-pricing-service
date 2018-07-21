@@ -2,7 +2,6 @@ from ...main import api
 from ...core.pricing import get_price_rules
 from flask_restplus import Resource
 
-
 ns = api.namespace('pricing', description='Pricing')
 
 
@@ -15,3 +14,46 @@ class PricingRules(Resource):
 
         return rules
 
+
+order = ns.schema_model('Order', {
+    'type': 'object',
+    'properties': {
+        'order': {
+            'type': 'object',
+            'properties': {
+                'id': {
+                    'type': 'integer',
+                },
+                'customer': {
+                    'type': 'object',
+                    'properties': {
+                        'name': {'type': 'string'},
+                        'customer_id': {'type': 'integer'}
+                    },
+                },
+                'items': {
+                    'type': 'array',
+                    'items': {
+                        'type': 'object',
+                        'properties': {
+                            'product_id': {
+                                'type': 'integer'
+                            },
+                            'quantity': {
+                                'type': 'integer'
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+})
+
+
+@ns.route('/quote')
+class Quote(Resource):
+    @ns.expect(order, validate=True)
+    @ns.doc(description='Quote a given order')
+    def post(self):
+        return 'hello world'
