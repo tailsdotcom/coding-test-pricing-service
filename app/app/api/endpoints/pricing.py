@@ -1,5 +1,7 @@
 from ...main import api
 from ...core.pricing import get_price_rules
+from ...core.order_pricer import price_order
+from flask import request
 from flask_restplus import Resource
 
 ns = api.namespace('pricing', description='Pricing')
@@ -56,5 +58,6 @@ class Quote(Resource):
     @ns.expect(order, validate=True)
     @ns.doc(description='Quote a given order')
     def post(self):
-
-        return 'hello world'
+        rules = get_price_rules()
+        order = request.json
+        return price_order(order, rules)
