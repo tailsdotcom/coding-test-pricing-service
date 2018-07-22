@@ -9,4 +9,17 @@ def get_price_rules():
 
     with open(FILE_LOCATION) as f:
         rules = json.load(f)
-    return rules
+
+    prices = {}
+    for p in rules['prices']:
+        id = p['product_id']
+        price = p['price']
+        vat_band = p['vat_band']
+        prices[id] = {
+            'price' : price,
+            'vat_band': vat_band
+        }
+
+    vat_rates = rules['vat_bands']
+
+    return prices, vat_rates

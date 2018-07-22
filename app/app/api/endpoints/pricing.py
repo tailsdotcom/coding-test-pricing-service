@@ -22,7 +22,7 @@ order = ns.schema_model('Order', {
             'type': 'object',
             'properties': {
                 'id': {
-                    'type': 'integer',
+                    'type': 'integer'
                 },
                 'customer': {
                     'type': 'object',
@@ -56,4 +56,5 @@ class Quote(Resource):
     @ns.expect(order, validate=True)
     @ns.doc(description='Quote a given order')
     def post(self):
+
         return 'hello world'
