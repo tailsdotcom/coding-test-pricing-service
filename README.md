@@ -2,7 +2,7 @@
 
 Thank you for taking the time to complete our coding test. Your challenge is to recreate a hypothetical version of our internal pricing service. 
 
-**Please use Python for this task** - apart from that, you're free to use any framework or library of your choosing.
+You're free to use the language, frameworks and/or libraries of your choice, but through this test we want to see how you think about and solve problems in code so make sure there's a decent chunk of your own code in there.
 
 Feel free to **spend as much or as little time as you'd like** as long as the specified functionality is complete. As a ballpark, the test should take around 90 minutes of development time.
 
