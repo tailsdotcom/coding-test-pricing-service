@@ -3,9 +3,9 @@
 Thank you for taking the time to complete our coding test. Your challenge is to
 recreate a hypothetical version of our internal pricing service. 
 
-You are free to use the language, frameworks and/or libraries of your choice, 
-but through this test we want to see how you think about and solve problems in 
-code so make sure there's a decent chunk of your own code in there.
+You can use any language, framework and/or library for this test. We want to 
+see how you think about and solve problems in code, so make sure there is a 
+decent chunk of your own code in there.
 
 Feel free to **spend as much or as little time as you'd like** as long as the 
 specified functionality is complete. As a ballpark, the test should take around
@@ -14,9 +14,8 @@ specified functionality is complete. As a ballpark, the test should take around
 
 ## Building the API
 
-Given the included [pricing data](./pricing.json), build a RESTful API endpoint
-that will accept requests like the one shown below and return pricing
-information for the order:
+Using the [pricing data](./pricing.json), build a RESTful API endpoint that 
+accepts requests like the one below.
 
 ```json
 {
@@ -41,7 +40,7 @@ information for the order:
 }
 ```
 
-The returned data structure should include:
+The endpoint should return a data structure which includes:
 
 * the total price for the order
 * the total VAT for the order
@@ -56,13 +55,15 @@ Any rounding should use standard arithmetic rounding to the nearest penny.
 
 ## Going international
 
-In this hypothetical universe we've decided to launch tails.com overseas, and 
-want the pricing service to be able to return equivalent prices in any given 
-currency using the latest available exchange rate data.
+In this hypothetical universe we have decided to launch tails.com overseas. We 
+now want the pricing service to return prices in any currency. Those prices 
+should be calculated using the latest available exchange rate.
 
-Expand the API to allow the currency to be passed in as part of the request, 
-and return the equivalent price in that currency. How that currency code is 
-passed in is up to you. Use a currency conversion rate API like 
+Expand the API to allow a currency to be submitted as part of the request, and 
+return the prices in that currency. How that currency code is passed in is up 
+to you. 
+
+Use a currency conversion rate API like 
 [free.currencyconverterapi.com](https://free.currencyconverterapi.com/) 
 to get the latest exchange rates as part of your solution. (Hint: you might 
 want to think about how to cache that data).
@@ -73,10 +74,12 @@ and currencies.
 
 ## Testing
 
-If you haven't been doing so as you've gone along, write appropriate tests in 
-the test framework of choice for the pricing logic. If you don't have time, 
-just tell us how you'd go about testing that this logic works as intended 
-(e.g. what level of testing, what sorts of test cases, etc.).
+We would like to see some tests written in the testing framework of your choice
+for the pricing logic. 
+
+If you do not have time to write tests, tell us how you
+would test the pricing logic works as intended. For example: what level of 
+testing, what sorts of test cases, etc.
 
 
 ## Submitting
